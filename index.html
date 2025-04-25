@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🥔 Potato Fact Generator</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background-color: #fdf6e3;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 3em;
+      color: #a0522d;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 12px;
+      background-color: #deb887;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+    button:hover {
+      background-color: #d2b48c;
+    }
+    .fact {
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: #555;
+    }
+    .potato-emoji {
+      font-size: 5em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Potato Fact Generator 🥔</h1>
+  <button onclick="showFact()">Give me a fact!</button>
+  <div class="fact" id="fact"></div>
+  <div class="potato-emoji">🥔</div>
+
+  <script>
+    const facts = [
+      "Potatoes were the first vegetable grown in space!",
+      "There are over 4,000 varieties of potatoes worldwide.",
+      "The average American eats about 120 pounds of potatoes each year.",
+      "Potatoes are 80% water.",
+      "A potato can actually conduct electricity!",
+      "Potatoes originated in the Andes mountains.",
+      "China grows more potatoes than any other country.",
+      "The world's heaviest potato weighed over 10 pounds.",
+      "French fries may have started in Belgium, not France.",
+      "You can make vodka from potatoes. Cheers!"
+    ];
+
+    function showFact() {
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById("fact").textContent = randomFact;
+    }
+  </script>
+</body>
+</html>
